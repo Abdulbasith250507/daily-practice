@@ -26,8 +26,6 @@ public:
             }
         }
 
-        // If any non-suspicious method calls a suspicious method,
-        // we cannot remove the suspicious group.
         for (int u = 0; u < n; u++) {
             if (!suspicious[u]) {
                 for (int v : adj[u]) {
@@ -42,7 +40,6 @@ public:
             }
         }
 
-        // Safe to remove all suspicious methods.
         vector<int> ans;
         for (int i = 0; i < n; i++) {
             if (!suspicious[i]) {
