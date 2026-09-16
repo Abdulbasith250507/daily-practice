@@ -9,7 +9,6 @@ public:
         if (ch == 'D') return 500;
         return 1000; // M
     }
-
     int romanToInt(string s) {
         int ans = 0;
 
@@ -20,7 +19,6 @@ public:
                 ans += value(s[i]);
             }
         }
-
         return ans;
     }
 };
