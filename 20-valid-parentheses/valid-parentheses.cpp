@@ -2,15 +2,10 @@ class Solution {
 public:
     bool isValid(string s) {
         stack<char> st;
-
         for (char c : s) {
-
-            // Opening bracket
             if (c == '(' || c == '[' || c == '{') {
                 st.push(c);
             }
-
-            // Closing bracket
             else {
                 if (st.empty())
                     return false;
@@ -26,8 +21,6 @@ public:
                 st.pop();
             }
         }
-
-        // All brackets must have been closed
         return st.empty();
     }
 };
