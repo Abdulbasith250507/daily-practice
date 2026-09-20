@@ -1,27 +1,3 @@
-// BRUTE FORCE APPROACH
-/*
-class Solution {
-public:
-    int strStr(string haystack, string needle) {
-        if (needle.size() > haystack.size())
-            return -1;
-        for(int i=0; i<=haystack.size()-needle.size(); i++){
-            bool match = true;
-            for(int j=0; j<needle.size(); j++){
-                if(haystack[i+j]!=needle[j]){
-                    match = false;
-                    break;
-                }
-            }
-            if(match)
-            return i;
-        }
-        return -1;
-    }
-};
-*/
-
-// OPTIMIZED CODE USING KMP(KRUTH MORRIS PRATT) ALGORITHM
 class Solution {
 public:
     int strStr(string haystack, string needle) {
